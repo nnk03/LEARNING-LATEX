@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amsthm, amsfonts}
+\newtheorem{theorem}{Theorem}[section]
+% \newtheorem{what_to_write in code}{what to display}[numbering according to what]
+\newtheorem{corollary}{Corollary}[theorem]
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cv}[2]{\begin{bmatrix}
+#1 \\
+#2 \\
+\end{bmatrix}}
+
+\title{LATEX TUTORIAL}
+\author{neerajnjps03 }
+\date{May 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+% FOR un-numbered sections, use \section*{text}
+Let's begin with a formula $e^{i\pi} + 1 = 0$
+
+$$e = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n 
+ = \lim_{n\to\infty}\frac{n}{\sqrt[n]{n!}}$$
+\begin{enumerate}
+    \item 
+	We can do another:
+
+ $$
+    e = \sum_{n=0}^{\infty} \frac{1}{n!}
+ $$
+\end{enumerate}
+\begin{itemize}
+    \item \underline{\textit{\textbf{As a continued fraction}}}
+
+    
+We can also use continued fraction
+$$
+    e = 2 + \frac{1}{2 + \frac{2}{3 + \frac{3}{4 + \frac{4}{5 + \ddots}}}}
+$$
+\end{itemize}
+
+\section*{More formulas}
+
+$$
+    \int_a^bf(x)dx
+$$
+\[
+    \int_a^bf(x)dx
+\]
+
+
+\begin{equation}
+  \iiint f(x, y, z) dxdydz
+  % begin equation allows for referncing
+  \label{triple_integral}
+\end{equation}
+
+
+\begin{equation}
+\label{eq:vector}
+    \Vec{v} = <v_1, v_2, v_3 >
+\end{equation}
+
+$$
+    \Vec{v}\cdot\Vec{w}
+$$
+$$
+    \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{bmatrix}
+$$
+
+% including images....
+Equation \ref{eq:vector} is a vector
+\begin{equation}
+e = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n 
+ = \lim_{n\to\infty}\frac{n}{\sqrt[n]{n!}}
+ =\lim_{t\to{0^+}}(1+t)^{\frac{1}{t}}
+\end{equation}
+\begin{align}
+% to indicate line has ended, we have to use \\ 
+% to make it even we have to use &
+e & = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n \\
+ &= \lim_{n\to\infty}\frac{n}{\sqrt[n]{n!}} \\
+ &=\lim_{t\to{0^+}}(1+t)^{\frac{1}{t}}
+\end{align}
+
+
+\begin{equation}
+\begin{split}
+% to indicate line has ended, we have to use \\ 
+% to make it even we have to use &
+% this begin equation together with begin split, does the same job as begin align but the whole equation is referenced by a single number rather than an individual number for each line
+e & = \lim_{n\to\infty}\left(1 + \frac{1}{n}\right)^n \\
+ &= \lim_{n\to\infty}\frac{n}{\sqrt[n]{n!}} \\
+ &=\lim_{t\to{0^+}}(1+t)^{\frac{1}{t}}
+\end{split}
+\end{equation}
+% \begin{multline}
+%     e^x \approx 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + \frac{x^6}{6!} + \frac{x^7}{7!} + \frac{x^8}{8!} + \frac{x^9}{9!} + \frac{x^{10}}{10!} + \frac{x^{11}}{11!} + \frac{x^{12}}{12!} + \frac{x^{13}}{13!} + \frac{x^{14}}{14!}+ \frac{x^{15}} {15!} + \frac{x^{16}}{16!} + \frac{x^{17}}{17!}+ \frac{x^{18}}{18!}
+% \end{multline}
+% multline not working ???
+
+
+\section{More Tricks}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|r|}
+    \hline
+       1  & 1 \\ \hline
+       3  & 4000000000000000 \\
+    \hline
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+% include graphicx...
+
+
+% \section{Theorems}
+\begin{theorem}[Hello World Theorem] Hello world 
+    
+\end{theorem}
+\begin{proof}
+    Proof goes here
+    % last symbol will automatically will be the Q.E.D symbol
+\end{proof}
+
+
+\begin{corollary}
+    corollary from the theorem
+\end{corollary}
+
+% making newcommands
+
+The real numbers $\mathbb{R}$
+
+
+Instead of typing $\mathbb{R}$ always, we can use macros
+
+
+The real numbers $\R$
+
+for shorthand for column matrix consisting of 2 elements
+Now the shorthand usage
+
+$$
+\cv{x}{y}
+$$
+
+\end{document}
